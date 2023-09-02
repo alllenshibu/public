@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Layout.astro"
+---
+
+<Layout title="Welcome to Astro.">
+  <main class="h-screen w-screen bg-black text-neutral-200">
+    <div
+      class="text-neutral-200 absolute h-20 flex flex-row justify-start items-center gap-4"
+    >
+      <img src="/assets/images/logo.png" class="h-full w-full" />
+      <p>SKEDVISION</p>
+    </div>
+    <div
+      class="absolute bottom-0 right-0 flex flex-col justify-end items-center gap-4"
+    >
+      <button>Instagram</button>
+      <button>Youtube</button>
+    </div>
+    <video class="h-full w-full object-cover" autoplay="autoplay">
+      <source src="/assets/videos/reel.mp4" type="video/mp4" />
+    </video>
+  </main>
+</Layout>
+
+<style></style>
