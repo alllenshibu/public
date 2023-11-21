@@ -1,4 +1,6 @@
 ---
+import UpcomingEventCard from "../components/UpcomingEventCard.astro";
+import PastEventCard from "../components/PastEventCard.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -9,7 +11,7 @@ import Layout from "../layouts/Layout.astro";
         <p
           class="text-neutral-200 text-4xl text-center font-black tracking-widest"
         >
-          skedvision
+          ZYFER
         </p>
         <p class="text-neutral-200 text-center font-black tracking-widest">
           Producer | DJ
@@ -22,9 +24,9 @@ import Layout from "../layouts/Layout.astro";
         <p class="md:w-[50%] text-6xl md:text-7xl font-semibold text-center">
           DANCING TO THE <span class="text-blue-700">RYTHM</span> OF LIFE
         </p>
-        <button class="bg-blue-700 text-xs tracking-widest px-8 py-3"
-          >BOOK NOW</button
-        >
+        <button class="bg-blue-700 text-xs tracking-widest px-8 py-3">
+          <a href="mailto:zyfer@gmail.com">BOOK NOW</a>
+        </button>
       </div>
 
       <div
@@ -72,23 +74,47 @@ import Layout from "../layouts/Layout.astro";
         class="h-[90vh] min-h-[600px] w-full absolute top-0 left-0 bg-black opacity-70"
       >
       </div>
-    </div>
-    <div class="min-h-[50vh] py-4 flex flex-col justify-center gap-4">
-      <div
-        class="relative px-4 h-full md:w-3/5 mx-auto flex flex-row justify-center items-center gap-4 text-center md:text-left"
-      >
-        <div class="h-full w-full relative">
-          <img
-            class="h-full w-full object-fill"
-            src="/assets/images/skedvision.jpg"
-          />
-          <p
-            class="-bottom-0 -left-0 absolute text-5xl font-semibold tracking-wider"
-          >
-            skedvision
-          </p>
+
+      <div class="py-4 min-h-[50vh] bg-neutral-900">
+        <div class="p-4 flex justify-center items-center">
+          <h2 class="text-5xl font-bold tracking-wide">Upcoming Events</h2>
         </div>
-        <div>
+        <div
+          class="p-4 flex flex-row flex-wrap justify-center items-center gap-8"
+        >
+          <UpcomingEventCard />
+          <UpcomingEventCard />
+          <UpcomingEventCard />
+          <UpcomingEventCard />
+          <UpcomingEventCard />
+        </div>
+      </div>
+
+      <div class="py-4 min-h-[50vh] bg-neutral-900">
+        <div class="p-4 flex justify-center items-center">
+          <h2 class="text-5xl font-bold tracking-wide">Past Events</h2>
+        </div>
+        <div
+          class="p-4 flex flex-row flex-wrap justify-center items-center gap-8"
+        >
+          <PastEventCard />
+          <PastEventCard />
+          <PastEventCard />
+          <PastEventCard />
+          <PastEventCard />
+        </div>
+      </div>
+
+      <div>
+        <div class="p-4 flex justify-center items-center">
+          <h2 class="text-5xl font-bold tracking-wide">About Me</h2>
+        </div>
+      </div>
+      <div class="w-3/5 mx-auto flex flex-row justify-center items-center gap-10">
+        <div class="w-1/2 h-full">
+          <img src="/assets/images/zyfer.jpg" alt="Zyfer" />
+        </div>
+        <div class="w-1/2">
           <p>
             WITH A LIFELONG PASSION FOR MUSIC PRODUCTION, I EMBARKED ON MY
             JOURNEY AS A DJ AND PRODUCER AT THE AGE OF 20. OVER THE YEARS, I'VE
@@ -106,8 +132,9 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </div>
     </div>
-    <footer class="text-center py-2 text-xs tracking-wide">
-      <p>COPYRIGHT &copy 2019-23 SKEDVISION. ALL RIGHTS RESERVED.</p>
-    </footer>
   </main>
+
+  <footer class="text-center py-2 text-xs tracking-wide">
+    <p>COPYRIGHT &copy 2019-23 ZYFER. ALL RIGHTS RESERVED.</p>
+  </footer>
 </Layout>
