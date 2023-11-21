@@ -2,9 +2,37 @@
 import UpcomingEventCard from "../components/UpcomingEventCard.astro";
 import PastEventCard from "../components/PastEventCard.astro";
 import Layout from "../layouts/Layout.astro";
+
+const upcomingEvents = [
+  {
+    name: "DJ Night",
+    location: "Frankfurt",
+    date: "2019-01-01",
+  },
+  {
+    name: "DJ Night",
+    location: "Frankfurt",
+    date: "2019-01-01",
+  },
+  {
+    name: "DJ Night",
+    location: "Frankfurt",
+    date: "2019-01-01",
+  },
+  {
+    name: "DJ Night",
+    location: "Frankfurt",
+    date: "2019-01-01",
+  },
+  {
+    name: "DJ Night",
+    location: "Frankfurt",
+    date: "2019-01-01",
+  },
+];
 ---
 
-<Layout title="SKEDVISION | Professional DJ and Music Producer | Origin Earth">
+<Layout title="ZYFER | Professional DJ and Music Producer | Origin Earth">
   <main class="bg-black text-neutral-200">
     <div class="h-screen min-h-[600px] w-screen">
       <div class="z-10 absolute h-20 w-full p-8">
@@ -82,11 +110,7 @@ import Layout from "../layouts/Layout.astro";
         <div
           class="p-4 flex flex-row flex-wrap justify-center items-center gap-8"
         >
-          <UpcomingEventCard />
-          <UpcomingEventCard />
-          <UpcomingEventCard />
-          <UpcomingEventCard />
-          <UpcomingEventCard />
+          {upcomingEvents.map((event) => <UpcomingEventCard />)}
         </div>
       </div>
 
@@ -110,7 +134,9 @@ import Layout from "../layouts/Layout.astro";
           <h2 class="text-5xl font-bold tracking-wide">About Me</h2>
         </div>
       </div>
-      <div class="w-3/5 mx-auto flex flex-row justify-center items-center gap-10">
+      <div
+        class="w-3/5 mx-auto flex flex-row justify-center items-center gap-10"
+      >
         <div class="w-1/2 h-full">
           <img src="/assets/images/zyfer.jpg" alt="Zyfer" />
         </div>
